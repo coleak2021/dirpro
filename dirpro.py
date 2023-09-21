@@ -5,8 +5,9 @@
 Author: coleak
 version: 1.0
 '''
-
+import os
 import random
+import sys
 import time
 import argparse
 from threading import Thread
@@ -70,9 +71,12 @@ def __get(url):
         return
 
     l=len(r.text)
-    if r.status_code != 404:
+    if r.status_code != 404 and r.status_code != 429:
         log = f'{r.status_code:<6}{l:<7}{url}'
         print(log)
+    elif r.status_code == 429:
+        print('Too Many Requests 429 so that Request terminated,please Set up smaller threads')
+        os._exit(0)
 
     d += 1
     if d in _list:
@@ -98,6 +102,10 @@ def searchdir(urlList):
         t.start()
     for t in thread_array:
         t.join()
+
+
+
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='dirscan,The top10000 dir is scanned by default')

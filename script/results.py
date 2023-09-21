@@ -4,8 +4,11 @@ import time
 
 def __Results(rooturl,ret):
     print("[*]扫描完成，正在根据长度和状态码整理扫描结果")
-    t=f"./scan_result/{rooturl.split('//')[1]}{int (time.time())}"
-    f = open(t, 'w',encoding="utf-8")
+    t=f"./scan_result/{rooturl.split('//')[1].replace(':', '')}{int (time.time())}"
+    try:
+        f = open(t, 'w',encoding="utf-8")
+    except:
+        f = open(f"{int (time.time())}", 'w',encoding="utf-8")
     f.write(f"扫描结束时间{time.strftime('%m-%d--%H:%M:%S')}")
     f.write('\n')
     def __log(s):
