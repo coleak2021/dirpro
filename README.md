@@ -10,7 +10,7 @@
 **已实现功能**
 
 - [x] 可自定义扫描线程
-- [x] 导入url文件进行批量扫描
+- [x] 导入url文件进行批量扫描并分别保存结果
 - [x] 状态码429检测，自动退出程序并提示设置更小的线程
 - [x] 每扫描10%自动显示扫描进度
 - [x] 可自定义扫描字典文件
@@ -100,6 +100,22 @@ python dirpro.py -u http://xxx.xxx.xxx.xxx -t 10
 
 
 
+- 设置url文件
+
+```
+python dirpro.py -f urls.txt
+```
+
+urls.txt文件格式为每行一个url，例如：
+
+```
+http://xxx.xxx.xxx.aaa
+http://xxx.xxx.xxx.xxx:6677
+https://xxx.xxx.xx
+```
+
+
+
 - 参数组合
 
 ```
@@ -120,7 +136,7 @@ python dirpro.py -u http://xxx.xxx.xxx.xxx -w wordlist.txt -a 127.0.0.1:7890 -t 
 **dirpro v1.2**
 
 ```
-1.新增导入url文件进行批量扫描功能
+1.新增导入url文件进行批量扫描并分别保存结果功能
 ```
 
 
