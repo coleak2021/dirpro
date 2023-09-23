@@ -45,4 +45,5 @@ def __Results(rooturl,ret):
         if result['length'] != maxLength:
             __log(f'{result["status_code"]:<6}{result["length"]:<7}{result["url"]}')
     f.close()
+    ret=[]
     return t
