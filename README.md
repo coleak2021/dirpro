@@ -43,6 +43,7 @@ options:
   -t T        thread:default=30
   -w W        dirfile path
   -a A        proxy,such as 127.0.0.1:7890
+  -f F        urlfile,urls in the file
   -b          fastly to find backup files and sensitive files
 ```
 
@@ -55,6 +56,7 @@ options:
 - -w 自定义扫描使用的字典文件
 - -a 设置代理，格式为ip:端口
 - -b 快速扫描目标的备份文件和源码泄露文件
+- -f url文件路径，实现批量自动扫描url
 
 
 
