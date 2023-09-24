@@ -42,33 +42,3 @@ if __name__ == '__main__':
             rooturl = rooturl.strip('/')
             (time1,ret) = __start(args, rooturl)
             __end(rooturl,time1,ret)
-
-    # time1 = time.time()
-    # rooturl=args.u.strip('/')
-    # urlList = []
-    # urlList.extend(searchFiles(rooturl))
-
-    # if args.a:
-    #     proxies['http'] = f"http://{args.a}"
-    #     proxies['https'] = f"http://{args.a}"
-    #
-    # if args.b:
-    #     sem = threading.Semaphore(5)
-    #     searchdir(urlList)
-    #
-    # else:
-    #     if not args.w:
-    #         defaultword='./wordlist/default'
-    #     else:
-    #         defaultword=args.w
-    #
-    #     f = open(defaultword, 'r')
-    #     files=f.read().splitlines()
-    #     for file in files:
-    #         urlList.append(f'{rooturl}/{file}')
-    #     f.close()
-    #     searchdir(urlList)
-    #
-    # result=__Results(rooturl,ret)
-    # time2 = time.time()
-    # print("总共花费: ", time2 - time1,"秒,",f"结果保存在{result}")
