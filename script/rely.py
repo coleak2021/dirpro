@@ -56,6 +56,7 @@ def __get(url):
 
     #判断请求是否成功
     if count >= 3:
+        d += 1
         print(f'visit failed:{url}')
         return
 

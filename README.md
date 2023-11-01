@@ -41,7 +41,7 @@ options:
   -h, --help  show this help message and exit
   -u U        url
   -t T        thread:default=30
-  -w W        dirfile path
+  -w W        wordlist
   -a A        proxy,such as 127.0.0.1:7890
   -f F        urlfile,urls in the file
   -b          fastly to find backup files and sensitive files
@@ -139,6 +139,13 @@ python dirpro.py -u http://xxx.xxx.xxx.xxx -w wordlist.txt -a 127.0.0.1:7890 -t 
 
 ```
 1.新增导入url文件进行批量扫描并分别保存结果功能
+```
+
+**dirpro v1.3**
+
+```
+1.修复了扫描二级目录时保存目录不正确
+2.修复进度条显示错误
 ```
 
 
